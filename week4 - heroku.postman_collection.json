@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "d69c9582-6f2d-4956-acc7-a1f157aea11a",
+		"name": "week4 - heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://murmuring-oasis-97174.herokuapp.com/posts?keyword=&timeSort=desc",
+					"protocol": "https",
+					"host": [
+						"murmuring-oasis-97174",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": ""
+						},
+						{
+							"key": "timeSort",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://murmuring-oasis-97174.herokuapp.com/posts/627dc0322131f2917f87b8fb",
+					"protocol": "https",
+					"host": [
+						"murmuring-oasis-97174",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"627dc0322131f2917f87b8fb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://murmuring-oasis-97174.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"murmuring-oasis-97174",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"測試關聯資料3\",\n    \"user\": \"62748d69725b41ccfbcb6ab5\",\n    \"image\": \"https://reurl.cc/OA43Yy\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://murmuring-oasis-97174.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"murmuring-oasis-97174",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"0513 test\",\n    \"user\": \"62748d69725b41ccfbcb6ab5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://murmuring-oasis-97174.herokuapp.com/posts/627a3275c042097d17d81d01",
+					"protocol": "https",
+					"host": [
+						"murmuring-oasis-97174",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"627a3275c042097d17d81d01"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
